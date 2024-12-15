@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import useAuth from '../../hooks/useAuth';
 import Swal from 'sweetalert2';
+import useAuth from '../../hooks/useAuth';
 
 const JobApply = () => {
     const { id } = useParams();
@@ -21,7 +21,7 @@ const JobApply = () => {
             github,
             resume
         }
-        fetch('http://localhost:3000/job-application', {
+        fetch('https://job-portal-server-silk.vercel.app/job-applications', {
             method: "POST",
             headers: {
                 'content-type' : 'application/json'

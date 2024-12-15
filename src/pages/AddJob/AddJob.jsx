@@ -1,7 +1,7 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useAuth from '../../hooks/useAuth';
-import { useNavigate } from 'react-router-dom';
 
 const AddJob = () => {
     const { user } = useAuth();
@@ -17,7 +17,7 @@ const AddJob = () => {
         newJob.responsibilities = newJob.responsibilities.split('\n');
         console.log(newJob);
 
-        fetch('http://localhost:3000/jobs', {
+        fetch('https://job-portal-server-silk.vercel.app/jobs', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

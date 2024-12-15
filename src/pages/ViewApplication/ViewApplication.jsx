@@ -9,7 +9,7 @@ const ViewApplication = () => {
         const data = {
             status: e.target.value
         }
-        fetch(`http://localhost:3000/job-applications/${id}`, {
+        fetch(`https://job-portal-server-silk.vercel.app/job-applications/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

@@ -5,7 +5,7 @@ const MyApplication = () => {
     const { user } = useAuth();
     const [jobs, setJobs] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:3000/job-application?email=${user.email}`)
+        fetch(`https://job-portal-server-silk.vercel.app/job-application?email=${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setJobs(data);
